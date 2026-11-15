@@ -21,6 +21,25 @@ const projects = [
   },
   {
     category: 'AI Automation',
+    title: 'AI Cafe Ordering Assistant',
+    description: 'A chat assistant that answers menu and delivery questions from the cafe’s own information, takes orders step by step, confirms them and saves them to Google Sheets. Replies in English or Urdu.',
+    stack: ['n8n', 'Gemini', 'RAG', 'Google Sheets'],
+    link: `${GH}/ai-cafe-ordering-assistant`,
+    image: '/images/cafe-workflow.png',
+    window: 'cafe-assistant'
+  },
+  {
+    category: 'AI Automation',
+    title: 'AI YouTube Video Agent Team',
+    description: 'A team of AI agents that picks a topic, researches it with Google Search, writes the script, finds footage, adds an AI voice and renders the video, then emails me for approval before uploading to YouTube.',
+    stack: ['n8n', 'Gemini', 'Google Search', 'Pexels', 'JSON2Video', 'YouTube API'],
+    link: `${GH}/ai-youtube-video-agents`,
+    image: '/images/youtube-agents.png',
+    window: 'youtube-video-agents',
+    wide: true
+  },
+  {
+    category: 'AI Automation',
     title: 'Customer Rating Automation',
     description: 'Checks bookings every hour, finds finished services and sends each customer a WhatsApp rating request, then marks it in Google Sheets.',
     stack: ['n8n', 'WhatsApp API', 'Google Sheets', 'JavaScript'],

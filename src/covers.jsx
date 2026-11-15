@@ -71,3 +71,50 @@ export function RatingCover() {
     </div>
   );
 }
+
+export function CafeChatCover() {
+  return (
+    <div className="cafe" aria-label="Example chat: the cafe assistant takes a delivery order, confirms it and saves it to Google Sheets">
+      <div className="cafe-head"><span className="cafe-logo">Z</span><div><b>Zoey’s Cafe</b><small>AI assistant</small></div></div>
+      <div className="cafe-msgs">
+        <p className="c-in">2 Zinger burgers and a Mint Margarita, delivery to DHA please</p>
+        <p className="c-out">2 × Zinger Burger, 1 × Mint Margarita, plus Rs. 200 delivery. Total Rs. 2,500. Shall I confirm?</p>
+        <p className="c-in short">Yes</p>
+        <span className="c-saved">✓ Order saved to Google Sheets</span>
+      </div>
+    </div>
+  );
+}
+
+const STEPS = [
+  ['Topic Scout', 'M21 21l-4.3-4.3M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16z'],
+  ['Researcher', 'M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z'],
+  ['Scriptwriter', 'M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z'],
+  ['Footage', 'M15 10l5-3v10l-5-3M3 6h12v12H3z'],
+  ['Voice & edit', 'M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3zM19 10v2a7 7 0 0 1-14 0v-2M12 19v3'],
+  ['Your approval', 'M22 6l-10 7L2 6M2 4h20v16H2z'],
+  ['YouTube', 'M2.5 17a24 24 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.6 49.6 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24 24 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.6 49.6 0 0 1-16.2 0A2 2 0 0 1 2.5 17M10 15l5-3-5-3z'],
+];
+
+export function AgentPipelineCover() {
+  return (
+    <div className="pipe" aria-label="Pipeline of AI agents: topic scout, researcher, scriptwriter, footage, voice and edit, your approval, YouTube">
+      <div className="pipe-row">
+        {STEPS.map(([label, d], i) => (
+          <React.Fragment key={label}>
+            <div className={`pipe-step${i === 5 ? ' wait' : i < 5 ? ' done' : ''}`}>
+              <span className="pipe-ic"><svg viewBox="0 0 24 24"><path d={d} /></svg></span>
+              <span className="pipe-lb">{label}</span>
+            </div>
+            {i < STEPS.length - 1 && <span className={`pipe-ln${i < 5 ? ' on' : ''}`} />}
+          </React.Fragment>
+        ))}
+      </div>
+      <div className="pipe-mail">
+        <span className="pipe-mail-ic">✉</span>
+        <div><b>New Short ready for review</b><small>Script, sources and video attached</small></div>
+        <span className="pipe-btn ok">Approve &amp; Upload</span><span className="pipe-btn">Reject</span>
+      </div>
+    </div>
+  );
+}

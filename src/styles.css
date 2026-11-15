@@ -186,3 +186,33 @@ h2{font:600 clamp(30px,3.6vw,46px)/1.12 var(--display);letter-spacing:-.025em;te
 }
 .demo-link{color:#fff;border-color:transparent;background:linear-gradient(135deg,#3d8bff,#7a6bff)}
 .demo-link:hover{border-color:transparent}
+/* Cafe chat cover */
+.cafe{width:100%;display:flex;flex-direction:column;background:radial-gradient(ellipse at 80% 0,#2a1d12,#0b1220 70%)}
+.cafe-head{display:flex;align-items:center;gap:10px;padding:9px 12px;font-size:12.5px;border-bottom:1px solid rgba(255,200,140,.12);background:rgba(20,12,6,.45)}
+.cafe-head small{display:block;color:#c9a27a;font-size:10.5px}
+.cafe-logo{display:grid;place-items:center;width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,#f0a35e,#c26a2b);font-weight:700;font-size:13px;color:#fff}
+.cafe-msgs{flex:1;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;padding:9px 11px}
+.cafe-msgs p{margin:0;max-width:86%;font-size:11.2px;line-height:1.4;padding:6px 9px;border-radius:10px;color:#eef2f8}
+.c-in{align-self:flex-end;background:#2d4f8a;border-top-right-radius:3px}
+.c-in.short{padding:5px 12px}
+.c-out{align-self:flex-start;background:#1c2738;border-top-left-radius:3px}
+.c-saved{align-self:center;font-size:10.5px;color:#4ee2a0;padding:3px 10px;border-radius:999px;border:1px solid rgba(78,226,160,.35);background:rgba(78,226,160,.07)}
+/* Agent pipeline cover */
+.pipe{width:100%;display:flex;flex-direction:column;justify-content:center;gap:22px;padding:18px 20px;background:radial-gradient(ellipse at 50% 0,#14234a,#071022 70%)}
+.pipe-row{display:flex;align-items:flex-start}
+.pipe-step{flex:none;display:flex;flex-direction:column;align-items:center;gap:7px;width:64px}
+.pipe-ic{display:grid;place-items:center;width:38px;height:38px;border-radius:11px;background:#0c1830;border:1px solid rgba(120,170,255,.3)}
+.pipe-ic svg{width:18px;height:18px;fill:none;stroke:#7f93b2;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.pipe-step.done .pipe-ic{border-color:rgba(94,240,255,.5)}.pipe-step.done svg{stroke:var(--cyan)}
+.pipe-step.wait .pipe-ic{border-color:var(--violet);box-shadow:0 0 16px rgba(154,140,255,.5);background:#1b1840}.pipe-step.wait svg{stroke:#c9c1ff}
+.pipe-lb{font-size:10px;color:#9fb3cf;text-align:center;line-height:1.2}
+.pipe-ln{flex:1;height:2px;margin-top:18px;background:rgba(120,170,255,.18);border-radius:2px;min-width:6px}
+.pipe-ln.on{background:linear-gradient(90deg,rgba(94,240,255,.7),rgba(78,161,255,.7))}
+.pipe-mail{display:flex;align-items:center;gap:10px;align-self:center;padding:9px 12px;border-radius:12px;background:rgba(12,24,48,.9);border:1px solid rgba(120,170,255,.25);font-size:12px}
+.pipe-mail small{display:block;color:var(--dim);font-size:10.5px}
+.pipe-mail-ic{display:grid;place-items:center;width:28px;height:28px;border-radius:8px;background:rgba(154,140,255,.15);color:#c9c1ff}
+.pipe-btn{font-size:10.5px;font-weight:600;padding:5px 10px;border-radius:8px;border:1px solid var(--line-strong);color:var(--muted);white-space:nowrap}
+.pipe-btn.ok{color:#fff;border-color:transparent;background:linear-gradient(135deg,#3d8bff,#7a6bff)}
+@media (max-width:640px){.pipe{padding:14px 8px;gap:16px}.pipe-step{width:44px;gap:5px}.pipe-ic{width:30px;height:30px}.pipe-lb{font-size:7.4px;letter-spacing:-.01em}.pipe-ln{margin-top:14px;min-width:2px}.pipe-btn:last-child{display:none}.pipe-mail{font-size:11px}}
+.card-in.wide .cover{height:300px}
+@media (max-width:640px){.card-in.wide .cover{height:200px}}
